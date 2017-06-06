@@ -1,0 +1,34 @@
+stage.set_background("concert")
+
+sprite = codesters.Sprite("kitten", 0, -100)
+
+def flip():
+    sprite.move_up(50)
+    sprite.turn_left(360)
+    sprite.move_down(50)
+
+def headstand():
+    sprite.flip_up_down()
+    sprite.move_left(150)
+    sprite.move_right(150)
+    sprite.flip_up_down()
+
+def sway():
+    sprite.turn_left(45)
+    sprite.turn_right(90)
+    sprite.turn_left(45)
+    sprite.flip_up_down()
+    stage.wait(1)
+    sprite.flip_up_down()
+
+
+
+def two_step():
+    for counter in range(6):
+        dancer.say("Let's dance!")
+        dancer.flip_right_left()
+        stage.wait(1)
+
+flip()
+headstand()
+sway()
